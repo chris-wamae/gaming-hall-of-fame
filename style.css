@@ -49,5 +49,4 @@ button#sign-up-button:hover {
 input.signUp:hover::placeholder{
     opacity:100%;
     color:var(--colorBlack);
-    
 }
