@@ -7,6 +7,12 @@
     --fontOne:Arial, Helvetica, sans-serif;
 
 }
+/* body */
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+}
 
 /* sign-up section */
 section#sign-up{
@@ -14,10 +20,13 @@ section#sign-up{
     width:350px;
     height:400px;
     font-family:var(--fontOne);
-    color:var(--colorWhite);
+    color:var(--colorRed);
     text-align: center;
     font-size:30px;
     border-radius:15px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
 }
 
 input.signUp{
@@ -36,17 +45,30 @@ button#sign-up-button{
     width:100px;
     border-radius:20px;
     font-weight:bold;
+    color: var(--colorBlack);
+    background-color:var(--colorRed);
 
 }
 section#sign-up form h4{
     padding-top:20px;
 }
 button#sign-up-button:hover {
-    background-color:var(--colorRed);
-    color:white;
+    background-color:var(--colorWhite);
+    color:var(--colorRed);
 }
 
 input.signUp:hover::placeholder{
     opacity:100%;
     color:var(--colorBlack);
+}
+
+nav p{
+    display: inline;
+    padding-left:200px;
+    color:var(--colorRed);
+}
+nav{
+    padding-bottom:25px;
+    padding-top:25px;
+    background-color:var(--colorBlack);
 }
