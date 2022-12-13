@@ -8,11 +8,14 @@ The web application you create must contain the following:
 2.A navigation menu with at least 3 menu options that is persistent throughout the entire application. 
 (Positioning of the navigation menu is absolutely dependent on your own preference.)
 
-3. Your application must provide some form of search functionality.
-
-4. It should contain at least three html forms.
-
-5. Your application must be deployed and accessible through a remote URL. (You can choose whichever deployment platform you wish)
+3.This app allows a user to submit their IGN (In game name)
 
 
+4. Your application must provide some form of search functionality.
+
+5. It should contain at least three html forms.
+
+6. Your application must be deployed and accessible through a remote URL. (You can choose whichever deployment platform you wish)
+
+This app allows a user to submit their IGN (In game name), select an avatar and have their name and avatar added to a list on the page  called the Hall of Fame.A user may also choose their favourite games from a list and have that added to their profiles as well.There is also a 
 

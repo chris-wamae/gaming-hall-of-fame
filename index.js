@@ -2,9 +2,23 @@ fetch("https://valorant-api.com/v1/playercards")
   .then((response) => response.json())
   .then((cardsData) => {
     console.log(cardsData.data);
-    let playerCard1 = document.querySelector("img");
-    playerCard1.setAttribute("src", `${cardsData.data[223]["displayIcon"]}`);
+    let playerCard1 = document.querySelector("img#player-avatar");
+    playerCard1.setAttribute("src", `${cardsData.data[0]["displayIcon"]}`);
+    let images = cardsData.data
+    
+    for(i=0;i <= images.length;i++){
+     
+    }
   });
+
+
+function ImageSelection(){
+  let nextImage = document.querySelector("button#next-image")
+  let previousImage = document.querySelector("button#previous-image")
+  let selectImage = document.querySelector("button#select-image")
+
+
+}
 
 function formDisplay() {
   document.querySelector("section#sign-up").style.display = "none";
