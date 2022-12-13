@@ -1,0 +1,53 @@
+/* re-usable classes */
+:root {
+    --colorBlack:#000;
+    --colorWhite:#FFF;
+    --colorRed:#E03616;
+    
+    --fontOne:Arial, Helvetica, sans-serif;
+
+}
+
+/* sign-up section */
+section#sign-up{
+    background-color:black;
+    width:350px;
+    height:400px;
+    font-family:var(--fontOne);
+    color:var(--colorWhite);
+    text-align: center;
+    font-size:30px;
+    border-radius:15px;
+}
+
+input.signUp{
+    border:0px;
+    margin-bottom:30px;
+    width:250px;
+    height:40px;
+    opacity:100%;
+    text-align:center;
+}
+
+button#sign-up-button{
+    border:0px;
+    margin-top:30px;
+    height:40px;
+    width:100px;
+    border-radius:20px;
+    font-weight:bold;
+
+}
+section#sign-up form h4{
+    padding-top:20px;
+}
+button#sign-up-button:hover {
+    background-color:var(--colorRed);
+    color:white;
+}
+
+input.signUp:hover::placeholder{
+    opacity:100%;
+    color:var(--colorBlack);
+    
+}
