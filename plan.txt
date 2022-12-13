@@ -1,0 +1,22 @@
+API to be used:
+https://valorant-api.com/v1/playercards
+
+The web application you create must contain the following:
+1.A dummy authentication page signup form.
+ - The page does not need any real authentication mechanism, dummy data is enough.
+
+2.A navigation menu with at least 3 menu options that is persistent throughout the entire application. 
+(Positioning of the navigation menu is absolutely dependent on your own preference.)
+
+3. Your application must provide some form of search functionality.
+
+4. It should contain at least three html forms.
+
+Technical Requirements
+Every single repository should have a detailed README file explaining how to setup the codebase upon cloning/forking 
+You should have regular git commits and the commit messages should be clear and concise.
+Your application must be deployed and accessible through a remote URL. (You can choose whichever deployment platform you wish)
+Your project should be structured in an organized manner.
+Your web application should have proper styling. Ensure it looks professional and clean.
+Your repository should include a license. (Adding a license to a repository - GitHub Docs) 
+Your project MVP should be completed within the stipulated timeline.

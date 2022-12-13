@@ -1,2 +1,2 @@
 # gaming-hall-of-fame
-This app allows a user to submit their IGN (In game name), select an avatar and have their name and avatar added to a list on the page  called the Hall of Fame
+This app allows a user to submit their IGN (In game name), select an avatar and have their name and avatar added to a list on the page  called the Hall of Fame.A user may also choose their favourite games from a list and have that added to their profiles as well.There is also a 
