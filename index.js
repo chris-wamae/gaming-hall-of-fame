@@ -1,23 +1,8 @@
+
+function fetchData(callBack){
 fetch("https://valorant-api.com/v1/playercards")
   .then((response) => response.json())
-  .then((cardsData) => {
-    console.log(cardsData.data);
-    let playerCard1 = document.querySelector("img#player-avatar");
-    playerCard1.setAttribute("src", `${cardsData.data[0]["displayIcon"]}`);
-    let images = cardsData.data
-    
-    for(i=0;i <= images.length;i++){
-     
-    }
-  });
-
-
-function ImageSelection(){
-  let nextImage = document.querySelector("button#next-image")
-  let previousImage = document.querySelector("button#previous-image")
-  let selectImage = document.querySelector("button#select-image")
-
-
+  .then((cardsData) => callBack(cardsData["data"]))
 }
 
 function formDisplay() {
@@ -33,9 +18,32 @@ function formDisplay() {
   });
 }
 formDisplay();
+
 function submitAlert() {
   function alertTimeout() {
     alert("Sign up successful");
   }
   setTimeout(alertTimeout, 10);
 }
+//selects the next Image when choosing an avatar
+let firstImage = 0
+function imageSelection(apiArray){
+  console.log(apiArray)
+let nextImage = document.querySelector("button#next-image")
+nextImage.addEventListener("click",function(){
+let currentImage = document.querySelector("img#player-avatar")
+currentImage.setAttribute("src",apiArray[firstImage]["displayIcon"])
+firstImage += 1})
+
+let previousImage = document.querySelector("button#previous-image")
+previousImage.addEventListener("click",function(){
+let currentImage = document.querySelector("img#player-avatar")
+currentImage.setAttribute("src",apiArray[firstImage]["displayIcon"])
+if(firstImage > 0){
+firstImage += -1
+}})
+
+}
+
+
+fetchData(imageSelection)
