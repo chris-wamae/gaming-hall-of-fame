@@ -119,8 +119,11 @@ border-radius:40px;
 }
 
 section#join-hall-of-fame input[type = "checkbox"]{
+width:20px;
+height:20px;
 
 }
+
 
 section#join-hall-of-fame input[type ="text"]{
 text-align: center;
@@ -186,4 +189,16 @@ img#player-avatar{
 section#hall-of-fame{
     position:relative;
     top:-600px;
+}
+
+h1#main-header{
+    text-align: center;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    color:var(--colorRed);
+    font-weight:bolder;
+    position: relative;
+    top:-680px;
+    background-color: var(--colorBlack);
+    width:100%;
 }
