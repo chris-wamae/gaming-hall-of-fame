@@ -64,11 +64,26 @@ input.signUp:hover::placeholder{
 
 nav p{
     display: inline;
-    padding-left:200px;
+    padding-left:190px;
     color:var(--colorRed);
 }
 nav{
     padding-bottom:25px;
     padding-top:25px;
     background-color:var(--colorBlack);
+}
+
+/*Join Hall of Fame section*/
+section#join-hall-of-fame{
+    background-color:var(--colorBlack);
+    width:800px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+    text-align:center;
+    color:var(--colorRed);
+    line-height:50px;
+}
+
+section#join-hall-of-fame img{
 }

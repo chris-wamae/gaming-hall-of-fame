@@ -49,30 +49,41 @@ function imageSelection(apiArray) {
   });
 
   let selectImage = document.querySelector("button#select-image");
+  let divNumber = 0
   selectImage.addEventListener("click", function () {
     let selectedImage = document.createElement("img");
+    let playerDiv = document.createElement("div")
+    playerDiv.setAttribute("id",`playerDiv${divNumber}`)
+    divNumber = divNumber + 1
     selectedImage.setAttribute("src", apiArray[firstImage]["displayIcon"]);
     let imageSection = document.querySelector("section#hall-of-fame");
-    imageSection.append(selectedImage);
-  });
-}
+    playerDiv.append(selectedImage);
+    imageSection.append(playerDiv)
+  });}
 
 fetchData(imageSelection);
 
 function addName() {
+  let divNumber = 0
   let hallOfFameForm = document.querySelector("form#hall-of-fame-form");
   hallOfFameForm.addEventListener("submit", function (event) {
     event.preventDefault();
     if (event.target.inGameName.value != "") {
-      let formInputs = document.querySelector("section#hall-of-fame");
       let setInGameName = document.createElement("p");
+      setInGameName.setAttribute("class","in-game-name")
       setInGameName.textContent = event.target.inGameName.value;
-      formInputs.append(setInGameName);
-      let currentNames = document.querySelectorAll("section#hall-of-fame p");
+      let displayDiv = document.querySelector(`div#playerDiv${divNumber}`)
+      divNumber = divNumber + 1
+      displayDiv.append(setInGameName);
+      let currentNames = document.querySelectorAll(`section#hall-of-fame p.in-game-name`)
+      
+      
       for (let i = 0; i <= currentNames.length - 1; i++) {
         for (let j = i + 1; j <= currentNames.length - 1; j++) {
           if (currentNames[i].textContent === currentNames[j].textContent) {
-            currentNames[j].remove();
+            currentNames[j].remove()
+           //alert("User already exists")
+           ;
           }
         }
       }
@@ -82,19 +93,38 @@ function addName() {
 addName();
 
 function addGame(){
-  let gamesList = document.querySelector("section#hall-of-fame")
+  let divNumber = 0
   let hallOfFameForm = document.querySelector("form#hall-of-fame-form");
   hallOfFameForm.addEventListener("submit", function (event) {
 event.preventDefault()
+let nameCheck = event.target.inGameName.value
+let nameExistanceCheck = document.querySelector(`div#playerDiv${divNumber}`)
+console.log(nameExistanceCheck.lastChild.nodeName)
+if(nameCheck != "" && nameExistanceCheck.lastChild.nodeName != "IMG"){
+let gamesList = document.querySelector(`div#playerDiv${divNumber}`)
 let checkedBoxes = document.querySelectorAll("input[type = checkbox]:checked")
 for(let checkedBox of checkedBoxes){
  let box =  document.createElement("p")
+ box.setAttribute("class","game-name")
  box.textContent = checkedBox.value
- gamesList.append(box)
- 
+ gamesList.append(box)}}
+ //else{alert("Please enter a unique in game name")}
+ let currentGames = document.querySelectorAll(`div#playerDiv${divNumber} p.game-name`);
+ divNumber = divNumber + 1
+      for (let i = 0; i <= currentGames.length - 1; i++) {
+        for (let j = i + 1; j <= currentGames.length - 1; j++) {
+          if (currentGames[i].textContent === currentGames[j].textContent) {
+            currentGames[j].remove();
+  }
 }
+}
+let playerDivElements = document.querySelectorAll("section#hall-of-fame div")
+for(let divs of playerDivElements){
+  let emptyCheck = divs.lastChild.nodeName
+  if(emptyCheck === "IMG"){
+    divs.remove()
+  }
+  }})}
 
-}
-)
-}
+
 addGame()
