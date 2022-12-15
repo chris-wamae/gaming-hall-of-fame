@@ -201,5 +201,15 @@ function joinHallOfFame() {
 }
 joinHallOfFame();
 
-
+function feedBackForm(){
+  document.querySelector("section#feedback-form").style.display = "none"
+  document.querySelector("p#leave-feedback").addEventListener("click",function(){
+   document.querySelector("section#feedback-form").setAttribute("style","")
+  })
+  document.querySelector("form#feedback").addEventListener("submit",function()
+  {
+ document.querySelector("section#feedback-form").style.display = "none"
+ alert("Thank you for your feedback")
+  })
+ }feedBackForm()
 
