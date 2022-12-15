@@ -201,5 +201,5 @@ function joinHallOfFame() {
 }
 joinHallOfFame();
 
-function hiddenElements() {}
-hiddenElements();
+
+
