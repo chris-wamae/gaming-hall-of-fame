@@ -26,7 +26,7 @@ function submitAlert() {
 }
 //selects the next Image when choosing an avatar
 
-function imageSelection(apiArray) {
+function imageSelection(apiArray){
   let firstImage = 0;
   let currentImage = document.querySelector("img#player-avatar");
   currentImage.setAttribute("src", apiArray[firstImage]["displayIcon"]);
@@ -55,10 +55,14 @@ function imageSelection(apiArray) {
     let playerDiv = document.createElement("div")
     playerDiv.setAttribute("id",`playerDiv${divNumber}`)
     divNumber = divNumber + 1
+    console.log(`Image selection Div number:${divNumber}`)
+
+
     selectedImage.setAttribute("src", apiArray[firstImage]["displayIcon"]);
     let imageSection = document.querySelector("section#hall-of-fame");
     playerDiv.append(selectedImage);
     imageSection.append(playerDiv)
+    selectImage.style.display = "none"
   });}
 
 fetchData(imageSelection);
@@ -73,7 +77,7 @@ function addName() {
       setInGameName.setAttribute("class","in-game-name")
       setInGameName.textContent = event.target.inGameName.value;
       let displayDiv = document.querySelector(`div#playerDiv${divNumber}`)
-      divNumber = divNumber + 1
+      
       displayDiv.append(setInGameName);
       let currentNames = document.querySelectorAll(`section#hall-of-fame p.in-game-name`)
       
@@ -85,10 +89,12 @@ function addName() {
            //alert("User already exists")
            ;
           }
+          
         }
       }
     }
-  });
+    divNumber = divNumber + 1
+    console.log(`Name selection Div number:${divNumber}`)});
 } 
 addName();
 
@@ -111,6 +117,7 @@ for(let checkedBox of checkedBoxes){
  //else{alert("Please enter a unique in game name")}
  let currentGames = document.querySelectorAll(`div#playerDiv${divNumber} p.game-name`);
  divNumber = divNumber + 1
+ console.log(`Game selection Div number:${divNumber}`)
       for (let i = 0; i <= currentGames.length - 1; i++) {
         for (let j = i + 1; j <= currentGames.length - 1; j++) {
           if (currentGames[i].textContent === currentGames[j].textContent) {
@@ -122,9 +129,16 @@ let playerDivElements = document.querySelectorAll("section#hall-of-fame div")
 for(let divs of playerDivElements){
   let emptyCheck = divs.lastChild.nodeName
   if(emptyCheck === "IMG"){
-    divs.remove()
+    divs.style.display = "none";
+
+
   }
   }})}
+
+function divReset(divNumber){
+ let reset = divNumber * 0
+ return reset
+}
 
 
 addGame()
