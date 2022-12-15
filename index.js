@@ -56,6 +56,7 @@ function imageSelection(apiArray){
     playerDiv.setAttribute("id",`playerDiv${divNumber}`)
     divNumber = divNumber + 1
     console.log(`Image selection Div number:${divNumber}`)
+    document.querySelector("p#join-hall-of-fame").style.display = "none"
 
 
     selectedImage.setAttribute("src", apiArray[firstImage]["displayIcon"]);
@@ -96,10 +97,10 @@ function addName() {
     }
    else {
     if(wholeSection.lastChild.nodeName === "IMG"){
-      console.log(10)
     divNumber = divNumber + 1
     console.log(`Name selection Div number:${divNumber}`)}
   }
+  document.querySelector("p#join-hall-of-fame").setAttribute("style","none")
 });
 } 
 addName();
@@ -111,19 +112,21 @@ function addGame(){
 event.preventDefault()
 let nameCheck = event.target.inGameName.value
 let nameExistanceCheck = document.querySelector(`div#playerDiv${divNumber}`)
-console.log(nameExistanceCheck.lastChild.nodeName)
 if(nameCheck != "" && nameExistanceCheck.lastChild.nodeName != "IMG"){
 let gamesList = document.querySelector(`div#playerDiv${divNumber}`)
+divNumber = divNumber + 1
+console.log(`Game selection Div number:${divNumber}`)
 let checkedBoxes = document.querySelectorAll("input[type = checkbox]:checked")
 for(let checkedBox of checkedBoxes){
  let box =  document.createElement("p")
  box.setAttribute("class","game-name")
  box.textContent = checkedBox.value
  gamesList.append(box)}}
- //else{alert("Please enter a unique in game name")}
+ else if(nameExistanceCheck.lastChild.nodeName = "IMG"){
+  divNumber = divNumber + 1
+    console.log(`Game selection Div number:${divNumber}`)
+ }
  let currentGames = document.querySelectorAll(`div#playerDiv${divNumber} p.game-name`);
- divNumber = divNumber + 1
- console.log(`Game selection Div number:${divNumber}`)
       for (let i = 0; i <= currentGames.length - 1; i++) {
         for (let j = i + 1; j <= currentGames.length - 1; j++) {
           if (currentGames[i].textContent === currentGames[j].textContent) {
@@ -135,9 +138,7 @@ let playerDivElements = document.querySelectorAll("section#hall-of-fame div")
 for(let divs of playerDivElements){
   let emptyCheck = divs.lastChild.nodeName
   if(emptyCheck === "IMG"){
-    divs.style.display = "none";
-
-
+    divs.remove()
   }
   }})}
 
@@ -150,5 +151,21 @@ function divReset(divNumber){
 addGame()
 
 function joinHallOfFame(){
-  
+  let menuHallJoin = document.querySelector("p#join-hall-of-fame")
+  menuHallJoin.addEventListener("click",function(){
+  let completeEntryCheck = document.querySelectorAll("section#hall-of-fame div")
+   for(let entry of completeEntryCheck){
+    if(entry.lastChild.nodeName === "IMG"){
+      let hiddenButton = document.querySelector("button#select-image")
+      hiddenButton.setAttribute("style","")
+      entry.remove()
+    }
+    else if(entry.lastChild.nodeName != "IMG"){
+      let hiddenButton = document.querySelector("button#select-image")
+      hiddenButton.setAttribute("style","")
+    }
+   }
+
+  })
 }
+joinHallOfFame()
