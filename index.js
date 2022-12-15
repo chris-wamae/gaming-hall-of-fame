@@ -72,12 +72,14 @@ function addName() {
   let hallOfFameForm = document.querySelector("form#hall-of-fame-form");
   hallOfFameForm.addEventListener("submit", function (event) {
     event.preventDefault();
-    if (event.target.inGameName.value != "") {
+    let wholeSection = document.querySelector(`section#hall-of-fame div#playerDiv${divNumber}`)
+    if (event.target.inGameName.value != "" && wholeSection.lastChild.nodeName === "IMG") {
       let setInGameName = document.createElement("p");
       setInGameName.setAttribute("class","in-game-name")
       setInGameName.textContent = event.target.inGameName.value;
       let displayDiv = document.querySelector(`div#playerDiv${divNumber}`)
-      
+      divNumber = divNumber + 1
+      console.log(`Name selection Div number:${divNumber}`)
       displayDiv.append(setInGameName);
       let currentNames = document.querySelectorAll(`section#hall-of-fame p.in-game-name`)
       
@@ -88,13 +90,17 @@ function addName() {
             currentNames[j].remove()
            //alert("User already exists")
            ;
-          }
-          
+          }         
         }
       }
     }
+   else {
+    if(wholeSection.lastChild.nodeName === "IMG"){
+      console.log(10)
     divNumber = divNumber + 1
-    console.log(`Name selection Div number:${divNumber}`)});
+    console.log(`Name selection Div number:${divNumber}`)}
+  }
+});
 } 
 addName();
 
@@ -142,3 +148,7 @@ function divReset(divNumber){
 
 
 addGame()
+
+function joinHallOfFame(){
+  
+}
