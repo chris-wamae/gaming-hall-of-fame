@@ -2,7 +2,7 @@
 :root {
     --colorBlack:#000;
     --colorWhite:#FFF;
-    --colorRed:#E03616;
+    --colorRed:#fa4554;
     
     --fontOne:Arial, Helvetica, sans-serif;
 
@@ -77,15 +77,14 @@ nav{
 /*Join Hall of Fame section*/
 section#join-hall-of-fame{
     background-color:var(--colorBlack);
-    width:800px;
-    margin-left:auto;
-    margin-right:auto;
+    width:50%;
+   
     margin-top:50px;
     text-align:center;
     color:var(--colorRed);
     line-height:50px;
 }
-
-.gameChoice{
-    background-color: #FFF;
+section#join-hall-of-fame img#hero-image{
+width:500px;
 }
+
