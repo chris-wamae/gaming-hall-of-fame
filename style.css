@@ -78,13 +78,112 @@ nav{
 section#join-hall-of-fame{
     background-color:var(--colorBlack);
     width:50%;
-   
     margin-top:50px;
     text-align:center;
     color:var(--colorRed);
-    line-height:50px;
+    line-height:60px;
+    margin-left:80px;
+    padding-right:100px;
+    height:700px ;
 }
-section#join-hall-of-fame img#hero-image{
-width:500px;
+img#hero-image{
+object-fit:cover;
+width:650px;
+position: relative;
+left:600px;
+top:-700px;
+height:700px;
 }
 
+section#join-hall-of-fame h2{
+font-size:45px;
+font-style: italic;
+font-family: 'Times New Roman', Times, serif;
+}
+
+section#join-hall-of-fame p{
+
+}
+
+section#join-hall-of-fame img{
+
+}
+
+section#join-hall-of-fame button{
+color:var(--colorRed);
+background-color:var(--colorBlack);
+border:2px solid white;
+width:100px;
+height:50px;
+border-radius:40px;
+}
+
+section#join-hall-of-fame input[type = "checkbox"]{
+
+}
+
+section#join-hall-of-fame input[type ="text"]{
+text-align: center;
+height:80px;
+}
+section#join-hall-of-fame input[type ="text"]::placeholder{
+    color:var(--colorRed);
+    font-size:20px;
+    }
+
+section#join-hall-of-fame button[type ="submit"]{
+    color:var(--colorRed);
+    background-color:var(--colorBlack);
+    border:2px solid white;
+    width:160px;
+    height:60px;
+    border-radius:40px;
+    font-size:27px;
+    font-weight: bold;
+    margin-top:20px;
+    }
+
+
+section#join-hall-of-fame button[type ="submit"]:hover{
+        color:var(--colorBlack);
+        background-color:lightgray;
+        border:2px solid;
+        border-color:var(--colorRed);
+        width:170px;
+        height:70px;
+        border-radius:40px;
+        font-size:27px;
+        font-weight: bold;
+        }
+        section#join-hall-of-fame button:hover{
+            color:var(--colorRed);
+            background-color:var(--colorWhite);
+            border:2px solid white;
+            width:100px;
+            height:50px;
+            border-radius:40px;
+            font-weight: bold;
+            }
+
+input#TwoPlayer{
+position: relative;
+margin-left:0px;
+}
+
+input#Multiplayer{
+margin-left:20px;
+}
+
+input#MassivelyMultiplayer{
+margin-left:20px;
+}
+
+img#player-avatar{
+    width:120px;
+    height:120px;
+}
+
+section#hall-of-fame{
+    position:relative;
+    top:-600px;
+}
