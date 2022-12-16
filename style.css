@@ -65,13 +65,47 @@ input.signUp:hover::placeholder{
 
 nav p{
     display: inline;
-    padding-left:170px;
+    padding-left:70px;
     color:var(--colorRed);
+    font-size:20px;
 }
 nav{
     padding-bottom:25px;
     padding-top:25px;
     background-color:var(--colorBlack);
+}
+
+nav input{
+    margin-left:40px;
+    height:40px;
+    width:270px;
+}
+
+nav input::placeholder{
+    font-size:20px;
+    text-align: center;
+}
+
+nav form button{
+    height:38px;
+    width:90px;
+    font-weight:bolder;
+    border-radius:20px;
+    font-size:20px;
+    color:var(--colorRed);
+    background-color:var(--colorWhite);
+    border:0px;
+}
+
+nav form button:hover{
+
+    border:2px solid white;
+    color:var(--colorRed);
+    background-color:var(--colorBlack);
+}
+
+nav form {
+    display:inline;
 }
 
 /*Join Hall of Fame section*/
@@ -248,3 +282,54 @@ section#feedback-form input::placeholder{
     margin-bottom:20px;
     text-align:center;
 }
+
+/* hall of fame section */
+section#hall-of-fame{
+    position: relative;
+    top:-675px;
+
+}
+
+section#hall-of-fame div{
+    text-align:center;
+    background-color:var(--colorBlack);
+    margin-bottom:20px;
+    padding-bottom:20px;
+    color:var(--colorWhite);
+   
+}
+
+section#hall-of-fame div p.game-name{
+display:inline;
+margin-right:300px;
+text-align:left;
+}
+
+section#hall-of-fame div button + p{
+padding-right:235px;
+}
+
+
+section#hall-of-fame div button{
+display:block;
+width:30px;
+height:30px;
+margin-left:auto;
+margin-right: auto;
+}
+
+section#hall-of-fame div p.in-game-name{
+font-size:32px;
+font-weight:bolder;
+padding-top:10px;
+padding-bottom:10px;
+font-family: 'Times New Roman', Times, serif;
+font-style:oblique;
+}
+
+section#hall-of-fame div img{
+    margin-top:10px;
+    border:1px solid white;
+    width:140px;
+    height:140px;
+    }

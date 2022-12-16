@@ -85,6 +85,7 @@ function addName() {
       setInGameName.textContent = event.target.inGameName.value.toUpperCase();
       let exitButton = document.createElement("button");
       exitButton.textContent = "X";
+      colorChange()
 
       let displayDiv = document.querySelector(`div#playerDiv${divNumber}`);
       displayDiv.append(setInGameName);
@@ -103,12 +104,14 @@ function addName() {
       for (let i = 0; i <= currentNames.length - 1; i++) {
         for (let j = i + 1; j <= currentNames.length - 1; j++) {
           if (currentNames[i].textContent === currentNames[j].textContent) {
+            currentNames[j].nextSibling.remove()
             currentNames[j].remove();
+           
             //alert("User already exists")
           }
         }
       }
-    } else {
+      } else {
       if (wholeSection.lastChild.nodeName === "IMG") {
         divNumber = divNumber + 1;
         console.log(`Name selection Div number:${divNumber}`);
@@ -177,6 +180,7 @@ addGame();
 function joinHallOfFame() {
   let menuHallJoin = document.querySelector("p#join-hall-of-fame");
   menuHallJoin.addEventListener("click", function () {
+    document.querySelector("form#hall-of-fame-form").reset()
     let completeEntryCheck = document.querySelectorAll(
       "section#hall-of-fame div"
     );
@@ -212,4 +216,40 @@ function feedBackForm(){
  alert("Thank you for your feedback")
   })
  }feedBackForm()
+
+function colorChange(){
+let firstColor = document.querySelectorAll("section#hall-of-fame div")
+firstColor.forEach(function(element){
+setInterval(function (){element.style.color = "#EC0808"},250)
+})
+let secondColor = document.querySelectorAll("section#hall-of-fame div")
+secondColor.forEach(function(element){
+setInterval(function (){element.style.color = "#FF00B7"},500)
+})
+let thirdColor = document.querySelectorAll("section#hall-of-fame div")
+thirdColor.forEach(function(element){
+setInterval(function (){element.style.color = "#0084FF"},750)
+})
+let fourthColor = document.querySelectorAll("section#hall-of-fame div")
+fourthColor.forEach(function(element){
+setInterval(function (){element.style.color = "#F1D302"},1000)
+})
+let fifthColor = document.querySelectorAll("section#hall-of-fame div")
+fifthColor.forEach(function(element){
+setInterval(function (){element.style.color = "#00FFCC"},1250)
+})}
+
+
+// setInterval(function (){document.("in-game-name").style.color = "#FF00B7"},500)
+// setInterval(function (){document.("in-game-name").style.color = "#0084FF"},750)
+// setInterval(function (){document.("in-game-name").style.color = "#F1D302"},1000)
+// setInterval(function (){document.("in-game-name").style.color = "#00FFCC"},1250)
+
+// setInterval(function (){document.querySelector("p.in-game-name").style.color = "#EC0808"},250)
+// setInterval(function (){document.querySelector("p.in-game-name").style.color = "#FF00B7"},500)
+// setInterval(function (){document.querySelector("p.in-game-name").style.color = "#0084FF"},750)
+// setInterval(function (){document.querySelector("p.in-game-name").style.color = "#F1D302"},1000)
+// setInterval(function (){document.querySelector("p.in-game-name").style.color = "#00FFCC"},1250)
+
+
 
