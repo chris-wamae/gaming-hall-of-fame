@@ -239,6 +239,12 @@ fifthColor.forEach(function(element){
 setInterval(function (){element.style.color = "#00FFCC"},1250)
 })}
 
+function hallOfFameScroll(){
+
+}
+// function searchPlayer(){
+//   document.querySelector("")
+// }
 
 
 

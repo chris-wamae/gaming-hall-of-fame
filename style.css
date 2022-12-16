@@ -17,6 +17,7 @@
 
 /* sign-up section */
 section#sign-up{
+    z-index:+2;
     background-color:black;
     width:350px;
     height:400px;
@@ -116,6 +117,10 @@ nav form button:hover{
 
 nav form {
     display:inline;
+}
+
+nav a{
+    text-decoration:none ;
 }
 
 /*Join Hall of Fame section*/
@@ -245,10 +250,14 @@ h1#main-header{
     top:-680px;
     background-color: var(--colorBlack);
     width:100%;
+    z-index:+2;
+    height:80px;
+    line-height:80px;
 }
 
 /* feedback form section */
 section#feedback-form{
+    z-index:+2;
     margin-top:20px;
     text-align:center;
     width:300px;
