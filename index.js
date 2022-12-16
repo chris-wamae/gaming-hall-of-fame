@@ -240,16 +240,6 @@ setInterval(function (){element.style.color = "#00FFCC"},1250)
 })}
 
 
-// setInterval(function (){document.("in-game-name").style.color = "#FF00B7"},500)
-// setInterval(function (){document.("in-game-name").style.color = "#0084FF"},750)
-// setInterval(function (){document.("in-game-name").style.color = "#F1D302"},1000)
-// setInterval(function (){document.("in-game-name").style.color = "#00FFCC"},1250)
-
-// setInterval(function (){document.querySelector("p.in-game-name").style.color = "#EC0808"},250)
-// setInterval(function (){document.querySelector("p.in-game-name").style.color = "#FF00B7"},500)
-// setInterval(function (){document.querySelector("p.in-game-name").style.color = "#0084FF"},750)
-// setInterval(function (){document.querySelector("p.in-game-name").style.color = "#F1D302"},1000)
-// setInterval(function (){document.querySelector("p.in-game-name").style.color = "#00FFCC"},1250)
 
 
 

@@ -73,6 +73,10 @@ nav{
     padding-bottom:25px;
     padding-top:25px;
     background-color:var(--colorBlack);
+    z-index:+1;
+    position:fixed;
+    top: 10px;
+    width:100%;
 }
 
 nav input{
@@ -84,6 +88,8 @@ nav input{
 nav input::placeholder{
     font-size:20px;
     text-align: center;
+    color: var(--colorRed);
+    opacity:70%;
 }
 
 nav form button{
@@ -112,7 +118,7 @@ nav form {
 section#join-hall-of-fame{
     background-color:var(--colorBlack);
     width:50%;
-    margin-top:50px;
+    margin-top:110px;
     text-align:center;
     color:var(--colorRed);
     line-height:60px;
