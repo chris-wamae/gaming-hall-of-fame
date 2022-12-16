@@ -242,9 +242,28 @@ setInterval(function (){element.style.color = "#00FFCC"},1250)
 function hallOfFameScroll(){
 
 }
-// function searchPlayer(){
-//   document.querySelector("")
-// }
+function searchPlayer(){
+  let searchForm = document.querySelector("form#search-form")
+  searchForm.addEventListener("submit",function(event){
+event.preventDefault()
+let idNumber = 0
+let inGameNames = document.querySelectorAll("p.in-game-name")
+let inputEntry = event.target.searchBar.value.toUpperCase()
+for(let inGameNamePElement of inGameNames){
+let inGameName = inGameNamePElement.textContent 
+if( inGameName === inputEntry){
+let scrollToPlayer = document.querySelector("form#search-form button")
+console.log(scrollToPlayer)
+scrollToPlayer.addEventListener("submit",function(){
+console.log(10)
+.setAttribute("id",`searchedName${idNumber}`)
+idNumber = idNumber + 1
+})
+
+}
+}
+})
+}searchPlayer()
 
 
 
