@@ -69,6 +69,10 @@ nav p{
     color:var(--colorRed);
     font-size:20px;
 }
+nav p:hover{
+ color:var(--colorWhite);
+ font-weight:bolder;
+}
 nav{
     padding-bottom:25px;
     padding-top:25px;
