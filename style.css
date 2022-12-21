@@ -14,7 +14,6 @@
     box-sizing:border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 /* sign-up section */
 section#sign-up{
     background-color:black;
@@ -63,9 +62,10 @@ input.signUp:hover::placeholder{
     color:var(--colorBlack);
 }
 
+/* page navigation section */
 nav p{
     display: inline;
-    padding-left:70px;
+    padding-left:90px;
     color:var(--colorRed);
     font-size:20px;
 }
@@ -86,7 +86,7 @@ nav{
 nav input{
     margin-left:40px;
     height:40px;
-    width:270px;
+    width:200px;
 }
 
 nav input::placeholder{
@@ -102,8 +102,8 @@ nav form button{
     font-weight:bolder;
     border-radius:20px;
     font-size:20px;
-    color:var(--colorRed);
-    background-color:var(--colorWhite);
+    color:var(--colorWhite);
+    background-color:var(--colorRed);
     border:0px;
 }
 
@@ -158,12 +158,13 @@ section#join-hall-of-fame img{
 }
 
 section#join-hall-of-fame button{
-color:var(--colorRed);
-background-color:var(--colorBlack);
+color:var(--colorBlack);
+background-color:var(--colorRed);
 border:2px solid white;
 width:100px;
 height:50px;
 border-radius:40px;
+font-weight:bolder;
 }
 
 section#join-hall-of-fame input[type = "checkbox"]{
@@ -183,8 +184,8 @@ section#join-hall-of-fame input[type ="text"]::placeholder{
     }
 
 section#join-hall-of-fame button[type ="submit"]{
-    color:var(--colorRed);
-    background-color:var(--colorBlack);
+    color:var(--colorBlack);
+    background-color:var(--colorRed);
     border:2px solid white;
     width:160px;
     height:60px;
@@ -234,6 +235,7 @@ img#player-avatar{
     height:120px;
 }
 
+/*hall of fame */
 section#hall-of-fame{
     position:relative;
     top:-600px;
@@ -253,54 +255,6 @@ h1#main-header{
     height:80px;
     line-height:80px;
 }
-
-/* feedback form section */
-section#feedback-form{
-    margin-top:120px;
-    text-align:center;
-    width:300px;
-    margin-left:auto;
-    margin-right:auto;
-    height:250px;
-    line-height:40px;
-    background-color:var(--colorBlack);
-}
-
-input#feedback-input{
-    margin-top:20px;
-    height:50px;
-}
-section#feedback-form input{
-    margin-bottom:20px;
-
-}
-
-section#feedback-form h4{
-color:var(--colorRed);
-font-size:25px;
-}
-
-section#feedback-form button{
-width:80px;
-height:30px;
-border-radius:20px;
-border:0px;
-color:var(--colorBlack);
-background-color:var(--colorRed);
-font-weight:bold;
-}
-
-section#feedback-form button:hover{
-    color:var(--colorRed);
-    background-color:var(--colorWhite);
-}
-
-section#feedback-form input::placeholder{
-    margin-bottom:20px;
-    text-align:center;
-}
-
-/* hall of fame section */
 section#hall-of-fame{
     position: relative;
     top:-675px;
@@ -358,4 +312,129 @@ section#hall-of-fame div img{
     border:1px solid white;
     width:140px;
     height:140px;
+    }
+
+/* feedback form section */
+section#feedback-form{
+    margin-top:120px;
+    text-align:center;
+    width:400px;
+    margin-left:auto;
+    margin-right:auto;
+    height:300px;
+    line-height:40px;
+    background-color:var(--colorBlack);
+}
+
+input#feedbackInput{
+    margin-top:20px;
+    height:100px;
+}
+
+input#feedbackName{
+    margin-top:5px;
+    height:30px;
+}
+
+
+section#feedback-form input{
+    margin-bottom:20px;
+
+}
+
+section#feedback-form h4{
+color:var(--colorRed);
+font-size:25px;
+}
+
+section#feedback-form button{
+width:80px;
+height:30px;
+border-radius:20px;
+border:0px;
+color:var(--colorBlack);
+background-color:var(--colorRed);
+font-weight:bold;
+}
+
+section#feedback-form button:hover{
+    color:var(--colorRed);
+    background-color:var(--colorWhite);
+}
+
+section#feedback-form input::placeholder{
+    margin-bottom:20px;
+    text-align:center;
+}
+
+/*Media queries to make the page responsive*/
+@media only screen and (max-device-width:1310px){
+nav p{
+padding-left:50px;
+}
+}
+
+@media only screen and (max-device-width:1050px){
+    nav p{
+    padding-left:30px;
+    font-size:15px;
+    
+    }
+    nav p#join-hall-of-fame{
+        padding-left:70px;
+        font-size:15px;
+        
+        }
+    nav input{
+    width:200px;
+    height:30px;
+        
+        }
+    nav button#player-search{
+          width:70px;
+          height:30px;
+          font-size:15px;
+            
+        }
+    section#join-hall-of-fame{
+   text-align:right;
+   width:400px;
+   font-size:20px;
+ /* width:700px;
+ padding-right:100px; */
+    }
+    section#join-hall-of-fame h2{
+        font-size:26px;
+      /* width:700px;
+      padding-right:100px; */
+         }
+
+         section#join-hall-of-fame p{
+            font-size:15px;
+            text-align:center;
+            padding-left:80px;
+          /* width:700px;
+          padding-right:100px; */
+             }
+             section#join-hall-of-fame img{
+                margin-right:50px;
+                 }
+            img#hero-image{
+                width:400px;
+                margin-left:0px;
+           }
+           section#join-hall-of-fame button{
+            width:80px;
+            height:30px;
+            font-size:14px;
+             }
+
+             section#join-hall-of-fame input{
+            width:20px;
+            height:20px;
+                 }
+            
+             #two-player-label,#multi-player-label,#massively-player-label{
+                font-size:14px;
+                 }
     }
