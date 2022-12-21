@@ -196,6 +196,7 @@ section#join-hall-of-fame button[type ="submit"]{
     font-size:27px;
     font-weight: bold;
     margin-top:20px;
+    z-index:2;
     }
 
 
@@ -618,6 +619,9 @@ img#hero-image{
         top:0px;
         margin-bottom:500px;
     }
+    section#join-hall-of-fame button#join-button{
+position: relative;
+    }
    h1#main-header{
     position:relative;
     font-size:30px;
@@ -656,5 +660,7 @@ p.game-name + p.game-name + p.game-name{
     position: relative;
     left:-750px;
        }
+
+
 
 }
