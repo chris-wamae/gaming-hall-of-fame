@@ -335,7 +335,7 @@ document.addEventListener("DOMContentLoaded", function () {
           for (let inGameNamePElement of inGameNames) {
             let inGameName = inGameNamePElement.textContent;
             if (inGameName === inputEntry) {
-              inGameNamePElement.parentNode.scrollIntoView();
+              inGameNamePElement.parentNode.scrollIntoView({behavior:"smooth"});
               //searchForm.removeEventListener("submit",scroller);
               searchForm.reset();
             } else {
