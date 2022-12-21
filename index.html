@@ -11,68 +11,106 @@
 
   <body>
     <section id="menu">
-        <nav>        
-          <a href="#hall-of-fame-form"><p id="join-hall-of-fame">Join the Hall of Fame</p></a>
-          <a href="#main-header"><p>Gaming Hall of Fame</p></a> 
-          <p id="sign-up-nav">Sign Up</p>
-          <p id="leave-feedback">Leave Feedback</p>
-          <form id="search-form">
-          <input type="search" id="searchBar" placeholder="Search player">
+      <nav>
+        <a href="#hall-of-fame-form"
+          ><p id="join-hall-of-fame">Join the Hall of Fame</p></a
+        >
+        <a href="#main-header"><p>Gaming Hall of Fame</p></a>
+        <p id="sign-up-nav">Sign Up</p>
+        <p id="leave-feedback">Leave Feedback</p>
+        <form id="search-form">
+          <input type="search" id="searchBar" placeholder="Search player" />
           <button type="submit" id="player-search">Search</button>
-         </form>
-        </nav>
-      </section>
-
-      <section id="sign-up">
-        <form id="sign-up-form">
-          <h4>Sign Up</h4>
-          <input type="text" placeholder="Enter your Name" class="signUp" id="signUpName"/>
-          <br />
-          <input type="text" placeholder="Enter your Email" class="signUp" id="signUpEmail"/>
-          <br />
-          <input type="password" placeholder="Create a password" class="signUp" id="signUpPassword"/>
-          <br />
-          <button type="submit" id="sign-up-button">
-            Sign Up
-          </button>
         </form>
-      </section>
-
-      <section id="feedback-form">
-        <h4>Feedback form</h4>
-        <form id="feedback">
-          <input type="text" placeholder="Your feedback" id="feedbackInput">
-          <br>
-          <input type="text" placeholder="Your name" id="feedbackName">
-          <br>
-          <button type="submit" id="submit-feedback">Submit</button>
-        </form>
-      </section>
-
-      <section id="join-hall-of-fame">
-        <form id="hall-of-fame-form">
-          <h2>Join the Hall of Fame</h2>
-          <p>Choose your avatar:</p>
-          <div>
-            <img id="player-avatar" src="" alt="" /><br />
-            <button id="previous-image" type="button">Previous</button>
-            <button id="select-image" type="button">Select</button>
-            <button id="next-image" type="button">Next</button>
-          </div>
-          <p>Enter your in game name:</p>
-          <input type="text" id="inGameName" placeholder="In game name"/>
-          <p>Which games do you play?</p>
-          <input type="checkbox"  name="TwoPlayer" value="TwoPlayer" id="TwoPlayer" class="gameChoice"/>
-          <label for="input" class="gameChoice" id="two-player-label">TwoPlayer</label>
-          <input type="checkbox"  name="Multiplayer" value="Multiplayer" id="Multiplayer" class="gameChoice"/><label for="input" class="gameChoice" id="multi-player-label">Multiplayer</label>
-          <input type="checkbox" name="MassivelyMultiplayer" value="MassivelyMultiplayer" id="MassivelyMultiplayer" class="gameChoice"/><label for="input" class="gameChoice" id="massively-player-label">MassiveMultiplay</label><br>
-          <button type="submit">Join</button>
-        </form>    
-      </section>
-
-      <img src="./images/valorant_jett .jpg" alt="" id="hero-image"> 
-    <h1 id="main-header">GAMING HALL OF FAME</h1>
-    <section id="hall-of-fame">
+      </nav>
     </section>
+
+    <section id="sign-up">
+      <form id="sign-up-form">
+        <h4>Sign Up</h4>
+        <input
+          type="text"
+          placeholder="Enter your Name"
+          class="signUp"
+          id="signUpName"
+        />
+        <br />
+        <input
+          type="text"
+          placeholder="Enter your Email"
+          class="signUp"
+          id="signUpEmail"
+        />
+        <br />
+        <input
+          type="password"
+          placeholder="Create a password"
+          class="signUp"
+          id="signUpPassword"
+        />
+        <br />
+        <button type="submit" id="sign-up-button">Sign Up</button>
+      </form>
+    </section>
+
+    <section id="feedback-form">
+      <h4>Feedback form</h4>
+      <form id="feedback">
+        <input type="text" placeholder="Your feedback" id="feedbackInput" />
+        <br />
+        <input type="text" placeholder="Your name" id="feedbackName" />
+        <br />
+        <button type="submit" id="submit-feedback">Submit</button>
+      </form>
+    </section>
+
+    <section id="join-hall-of-fame">
+      <form id="hall-of-fame-form">
+        <h2>Join the Hall of Fame</h2>
+        <p>Choose your avatar:</p>
+        <div>
+          <img id="player-avatar" src="" alt="" /><br />
+          <button id="previous-image" type="button">Previous</button>
+          <button id="select-image" type="button">Select</button>
+          <button id="next-image" type="button">Next</button>
+        </div>
+        <p>Enter your in game name:</p>
+        <input type="text" id="inGameName" placeholder="In game name" />
+        <p>Which games do you play?</p>
+        <input
+          type="checkbox"
+          name="TwoPlayer"
+          value="TwoPlayer"
+          id="TwoPlayer"
+          class="gameChoice"
+        />
+        <label for="input" class="gameChoice" id="two-player-label"
+          >TwoPlayer</label
+        >
+        <input
+          type="checkbox"
+          name="Multiplayer"
+          value="Multiplayer"
+          id="Multiplayer"
+          class="gameChoice"
+        /><label for="input" class="gameChoice" id="multi-player-label"
+          >Multiplayer</label
+        >
+        <input
+          type="checkbox"
+          name="MassivelyMultiplayer"
+          value="MassivelyMultiplayer"
+          id="MassivelyMultiplayer"
+          class="gameChoice"
+        /><label for="input" class="gameChoice" id="massively-player-label"
+          >MassiveMultiplay</label
+        ><br />
+        <button type="submit">Join</button>
+      </form>
+    </section>
+
+    <img src="./images/valorant_jett .jpg" alt="" id="hero-image" />
+    <h1 id="main-header">GAMING HALL OF FAME</h1>
+    <section id="hall-of-fame"></section>
   </body>
 </html>

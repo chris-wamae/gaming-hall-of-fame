@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   //Prevents the javascript from being run before the html loads
   function fetchData(callBack) {
@@ -119,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let displayDiv = document.querySelector(`div#playerDiv${divNumber}`);
         displayDiv.append(setInGameName);
         displayDiv.append(exitButton);
-        displayDiv.scrollIntoView({behavior:"smooth"})
+        displayDiv.scrollIntoView({ behavior: "smooth" });
         exitButton.addEventListener("click", function () {
           document
             .querySelector("p#join-hall-of-fame")
@@ -138,7 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (currentNames[i].textContent === currentNames[j].textContent) {
               currentNames[j].nextSibling.remove();
               currentNames[j].remove();
-              
 
               //alert("User already exists")
             }
@@ -326,16 +324,18 @@ document.addEventListener("DOMContentLoaded", function () {
       let inputEntry = event.target.searchBar.value.toUpperCase();
       if (inputEntry === "") {
         alert("Please enter a player name");
-      } else { 
+      } else {
         if (inGameNames.length === 0) {
-          console.log(inGameNames)
+          console.log(inGameNames);
           alert("Player does not exist");
-        } else{
+        } else {
           inGameNames = document.querySelectorAll("p.in-game-name");
           for (let inGameNamePElement of inGameNames) {
             let inGameName = inGameNamePElement.textContent;
             if (inGameName === inputEntry) {
-              inGameNamePElement.parentNode.scrollIntoView({behavior:"smooth"});
+              inGameNamePElement.parentNode.scrollIntoView({
+                behavior: "smooth",
+              });
               //searchForm.removeEventListener("submit",scroller);
               searchForm.reset();
             } else {
