@@ -1,0 +1,9 @@
+/* Body*/
+/*Resetting page default styling */
+*{
+   padding:0;
+   margin:0;
+   box-sizing:border-box;
+/* adding page font  */
+font-family: 'Roboto', sans-serif;
+}
