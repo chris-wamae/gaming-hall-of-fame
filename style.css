@@ -1,5 +1,14 @@
+/* Setting re-usable styling */
+:root{
+    /* bold font */
+    --bold:700;
+    /* colors */
+    --red:#FF4654;
+    --black:#000000;
+    --white:#FFFFFF;
+}
 /* Body*/
-/*Resetting page default styling */
+/*Resetting browser default styling */
 *{
    padding:0;
    margin:0;
@@ -7,3 +16,30 @@
 /* adding page font  */
 font-family: 'Roboto', sans-serif;
 }
+
+/* nav bar  */
+section#menu{
+background-color:var(--black);
+}
+
+#sign-up-nav,#leave-feedback,#searchBar,#player-search,.join-hall-of-fame{
+display:none;
+
+}
+#nav-div{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+
+#main-header-div {
+    background-color: aqua;
+}
+/*hero image */
+img#hero-image{
+    width:100%;
+}
+

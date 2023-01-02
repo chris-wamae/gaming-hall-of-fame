@@ -1,123 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gaming Hall of Fame</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script type="text/javascript" src="./index.js"></script>
-    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style> @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap'); </style>
-  </head>
 
-  <body>
-    <section id="menu">
-      <nav>
-        <a href="#hall-of-fame-form"
-          ><p id="join-hall-of-fame">Join the Hall of Fame</p></a
-        >
-        <a href="#main-header"><p>Gaming Hall of Fame</p></a>
-        <iconify-icon icon="material-symbols:person-search" style="color: #ff4654;" width="35" height="35"></iconify-icon>
-        <iconify-icon icon="material-symbols:menu-rounded" style="color: #ff4654;" width="50" height="50"></iconify-icon>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaming Hall of Fame</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script type="text/javascript" src="./index.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+  </style>
+</head>
+
+<body>
+  <section id="menu">
+    <nav>
+      <div id="main-header-div"><a href="#main-header">
+          <p id="main-header-p">GAMING HALL OF FAME</p>
+        </a>
+     </div>
+      <div id="nav-div">
+        <a href="#main-header-p"><button>Hall of Fame</button></a>
+        <a href="#hall-of-fame-form" ><button>Join Hall of Fame</button></a>
+        <a href="#hall-of-fame-form"><p class="join-hall-of-fame">Join the Hall of Fame</p>
+        </a>
+        <iconify-icon icon="material-symbols:person-search" style="color: #ff4654;" width="45"
+          height="45"></iconify-icon>
+        <iconify-icon icon="material-symbols:menu-rounded" style="color: #ff4654;" width="50"
+          height="50" id="menu-icon"></iconify-icon>
         <p id="sign-up-nav">Sign Up</p>
         <p id="leave-feedback">Leave Feedback</p>
         <form id="search-form">
           <input type="search" id="searchBar" placeholder="Search player" />
           <button type="submit" id="player-search">Search</button>
         </form>
-      </nav>
-    </section>
+      </div>
+    </nav>
+  </section>
 
-    <section id="sign-up">
-      <form id="sign-up-form">
-        <h4>Sign Up</h4>
-        <input
-          type="text"
-          placeholder="Enter your Name"
-          class="signUp"
-          id="signUpName"
-        />
-        <br />
-        <input
-          type="text"
-          placeholder="Enter your Email"
-          class="signUp"
-          id="signUpEmail"
-        />
-        <br />
-        <input
-          type="password"
-          placeholder="Create a password"
-          class="signUp"
-          id="signUpPassword"
-        />
-        <br />
-        <button type="submit" id="sign-up-button">Sign Up</button>
-      </form>
-    </section>
+  <section id="sign-up">
+    <form id="sign-up-form">
+      <h4>Sign Up</h4>
+      <input type="text" placeholder="Enter your Name" class="signUp" id="signUpName" />
+      <br />
+      <input type="text" placeholder="Enter your Email" class="signUp" id="signUpEmail" />
+      <br />
+      <input type="password" placeholder="Create a password" class="signUp" id="signUpPassword" />
+      <br />
+      <button type="submit" id="sign-up-button">Sign Up</button>
+    </form>
+  </section>
 
-    <section id="feedback-form">
-      <h4>Feedback form</h4>
-      <form id="feedback">
-        <input type="text" placeholder="Your feedback" id="feedbackInput" />
-        <br />
-        <input type="text" placeholder="Your name" id="feedbackName" />
-        <br />
-        <button type="submit" id="submit-feedback">Submit</button>
-      </form>
-    </section>
+  <section id="feedback-form">
+    <h4>Feedback form</h4>
+    <form id="feedback">
+      <input type="text" placeholder="Your feedback" id="feedbackInput" />
+      <br />
+      <input type="text" placeholder="Your name" id="feedbackName" />
+      <br />
+      <button type="submit" id="submit-feedback">Submit</button>
+    </form>
+  </section>
 
-    <section id="join-hall-of-fame">
-      <form id="hall-of-fame-form">
-        <h2>Join the Hall of Fame</h2>
-        <p>Choose your avatar:</p>
-        <div>
-          <img id="player-avatar" src="" alt="" /><br />
-          <button id="previous-image" type="button">Previous</button>
-          <iconify-icon icon="material-symbols:assistant-navigation" style="color: #ff4654;" width="50" height="50" rotate="90deg"></iconify-icon>
-          <iconify-icon icon="material-symbols:assistant-navigation" style="color: #ff4654;" width="50" height="50" rotate="270deg"></iconify-icon>
-          <button id="select-image" type="button">Select</button>
-          <button id="next-image" type="button">Next</button>
-        </div>
-        <p>Enter your in game name:</p>
-        <input type="text" id="inGameName" placeholder="In game name" />
-        <p>Which games do you play?</p>
-        <input
-          type="checkbox"
-          name="TwoPlayer"
-          value="TwoPlayer"
-          id="TwoPlayer"
-          class="gameChoice"
-        />
-        <label for="input" class="gameChoice" id="two-player-label"
-          >TwoPlayer</label
-        >
-        <input
-          type="checkbox"
-          name="Multiplayer"
-          value="Multiplayer"
-          id="Multiplayer"
-          class="gameChoice"
-        /><label for="input" class="gameChoice" id="multi-player-label"
-          >Multiplayer</label
-        >
-        <input
-          type="checkbox"
-          name="MassivelyMultiplayer"
-          value="MassivelyMultiplayer"
-          id="MassivelyMultiplayer"
-          class="gameChoice"
-        /><label for="input" class="gameChoice" id="massively-player-label"
-          >MassiveMultiplay</label
-        ><br />
-        <button type="submit">Join</button>
-      </form>
-    </section>
+  <section id="join-hall-of-fame">
+    <form id="hall-of-fame-form">
+      <h2>Join the Hall of Fame</h2>
+      <p>Choose your avatar:</p>
+      <div>
+        <img id="player-avatar" src="" alt="" /><br />
+        <button id="previous-image" type="button">Previous</button>
+        <iconify-icon icon="material-symbols:assistant-navigation" style="color: #ff4654;" width="50" height="50"
+          rotate="90deg"></iconify-icon>
+        <iconify-icon icon="material-symbols:assistant-navigation" style="color: #ff4654;" width="50" height="50"
+          rotate="270deg"></iconify-icon>
+        <button id="select-image" type="button">Select</button>
+        <button id="next-image" type="button">Next</button>
+      </div>
+      <p>Enter your in game name:</p>
+      <input type="text" id="inGameName" placeholder="In game name" />
+      <p>Which games do you play?</p>
+      <input type="checkbox" name="TwoPlayer" value="TwoPlayer" id="TwoPlayer" class="gameChoice" />
+      <label for="input" class="gameChoice" id="two-player-label">TwoPlayer</label>
+      <input type="checkbox" name="Multiplayer" value="Multiplayer" id="Multiplayer" class="gameChoice" /><label
+        for="input" class="gameChoice" id="multi-player-label">Multiplayer</label>
+      <input type="checkbox" name="MassivelyMultiplayer" value="MassivelyMultiplayer" id="MassivelyMultiplayer"
+        class="gameChoice" /><label for="input" class="gameChoice"
+        id="massively-player-label">MassiveMultiplay</label><br />
+      <button type="submit">Join</button>
+    </form>
+  </section>
 
-    <img src="./images/valorant_jett .jpg" alt="" id="hero-image" />
-    <h1 id="main-header">GAMING HALL OF FAME</h1>
-    <section id="hall-of-fame"></section>
-  </body>
+  <img src="./images/valorant_jett .jpg" alt="" id="hero-image" />
+  <h1 id="main-header">GAMING HALL OF FAME</h1>
+  <section id="hall-of-fame"></section>
+</body>
+
 </html>
