@@ -29,17 +29,135 @@ display:none;
 #nav-div{
     display:flex;
     flex-direction:row;
-    justify-content:space-between;
+    justify-content:left;
     align-items:center;
+}
+#hall-of-fame-button{
+background-color:var(--red);
+font-size:14px;
+font-weight:bold;
+height:35px;
+width:100px;
+border-radius:10px;
+border:1px solid white;
+margin-left:10px;
+margin-right:20px;
+}
+#join-hall-of-fame-button{
+background-color:var(--red);
+font-size:14px;
+font-weight:bold;
+height:35px;
+width:130px;
+border-radius:10px;
+border:1px solid white;
+margin-right:35px;
+}
+
+#main-header-div {
+padding-top:5px;
+padding-left:10px;   
 }
 
 
+#main-header-div a{
+text-decoration:none;
+color:var(--red);
+font-size:1.2rem;
+text-align:center;
+font-weight:bold;
 
-#main-header-div {
-    background-color: aqua;
 }
 /*hero image */
 img#hero-image{
-    width:100%;
+display:none; 
+}
+
+/* background image */
+section#join-hall-of-fame{
+    height:600px;
+    background-image:url(./images/valorant_jett.jpg);
+    background-size:cover;
+    background-position:-80px;
+    background-repeat:no-repeat;
+}
+section#join-hall-of-fame form{
+padding-top:30px;
+margin-left:auto;
+margin-right:auto;
+width:60%;
+text-align:center;
+}
+#join-hall-of-fame p{
+    font-weight:bold;
+    margin:15px 0px;
+}
+#join-hall-of-fame img{
+    margin-bottom:10px;
+}
+#join-hall-of-fame input{
+    margin-bottom:10px;
+    height:50px;
+    text-align:center;
+}
+#join-hall-of-fame input::placeholder{
+color:var(--red);
+}
+#join-hall-of-fame input[type="checkbox"]{
+    position: relative;
+    left:20%;
+    top:-15px;
+    width:20px;
+    height:20px;
+}
+
+#massively-player-label{
+position: relative;
+top:20px;
+}
+
+input[type="checkbox"]#MassivelyMultiplayer{
+    position: relative;
+    color:red;
+    top:20px;
+    left:-45%;
+}
+#join-hall-of-fame button[type="submit"]{
+margin-top:25px;
+width:100px;
+height:50px;
+font-size:18px;
+font-weight:bold;
+color:var(--red);
+background-color:var(--black);
+border:2px solid white;
+border-radius:10px;
+}
+
+#previous-image{
+display:none;
+}
+#next-image{
+display:none;
+}
+#select-image{
+position:relative;
+left:-24%;
+top:-20px;
+width:80px;
+height:40px;
+font-size:16px;
+font-weight:bold;
+color:var(--red);
+background-color:var(--black);
+border:0px;
+border-radius:10px;
+}
+#next-icon{
+    position: relative;
+    left:35%;
+}
+#previous-icon{
+    position: relative;
 }
 
