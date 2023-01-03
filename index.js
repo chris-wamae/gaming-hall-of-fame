@@ -65,8 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     nextImageMobile.addEventListener("click",function(){
     firstImage = firstImage + 1;
     currentImage.setAttribute("src",apiArray[firstImage]["displayIcon"])
-    })
-    console.log(nextImageMobile);
+    });
     //displays the previous image when clicked
     let previousImage = document.querySelector("button#previous-image");
     previousImage.addEventListener("click", function () {
@@ -77,7 +76,17 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       currentImage.setAttribute("src", apiArray[firstImage]["displayIcon"]);
     })
-    let previousImageMobile = document.querySelector("iconify-icon#");
+    let previousImageMobile = document.querySelector("iconify-icon#previous-icon")
+    previousImageMobile.addEventListener("click",function(){
+      if (firstImage > 0) {
+        firstImage = firstImage - 1;
+      } else {
+        firstImage = 0;
+      }
+      currentImage.setAttribute("src", apiArray[firstImage]["displayIcon"])
+    
+    });
+
     //selects the currently displayed image to be the users avatar
     let selectImage = document.querySelector("button#select-image");
     let divNumber = 0;
