@@ -22,7 +22,7 @@ section#menu{
 background-color:var(--black);
 }
 
-#sign-up-nav,#leave-feedback,#searchBar,#player-search,.join-hall-of-fame{
+#sign-up-nav,#leave-feedback,#searchBar,#player-search,#menu-join-hall-of-fame{
 display:none;
 
 }
@@ -111,7 +111,8 @@ color:var(--red);
     height:20px;
 }
 #join-hall-of-fame label{
-font-weight:bolder;
+font-weight:bold;
+background-color:rgb(151, 210, 249);
 }
 #massively-player-label{
 position: relative;

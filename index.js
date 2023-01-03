@@ -60,7 +60,13 @@ document.addEventListener("DOMContentLoaded", function () {
     nextImage.addEventListener("click", function () {
       firstImage = firstImage + 1;
       currentImage.setAttribute("src", apiArray[firstImage]["displayIcon"]);
-    });
+    })
+    let nextImageMobile = document.querySelector("iconify-icon#next-icon")
+    nextImageMobile.addEventListener("click",function(){
+    firstImage = firstImage + 1;
+    currentImage.setAttribute("src",apiArray[firstImage]["displayIcon"])
+    })
+    console.log(nextImageMobile);
     //displays the previous image when clicked
     let previousImage = document.querySelector("button#previous-image");
     previousImage.addEventListener("click", function () {
@@ -70,7 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
         firstImage = 0;
       }
       currentImage.setAttribute("src", apiArray[firstImage]["displayIcon"]);
-    });
+    })
+    let previousImageMobile = document.querySelector("iconify-icon#");
     //selects the currently displayed image to be the users avatar
     let selectImage = document.querySelector("button#select-image");
     let divNumber = 0;
@@ -80,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
       playerDiv.setAttribute("id", `playerDiv${divNumber}`);
       divNumber = divNumber + 1;
       console.log(`Image selection Div number:${divNumber}`);
-      document.querySelector("p#join-hall-of-fame").style.display = "none"; //hides the form
+      document.querySelector("p#menu-join-hall-of-fame").style.display = "none"; //hides the form
 
       selectedImage.setAttribute("src", apiArray[firstImage]["displayIcon"]);
       let imageSection = document.querySelector("section#hall-of-fame");
@@ -149,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
       document
-        .querySelector("p#join-hall-of-fame")
+        .querySelector("p#menu-join-hall-of-fame")
         .setAttribute("style", "none"); //hides the form
     });
   }
@@ -216,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //It scrolls the page to the Join hall of fame form when clicked
   //It shows the select image button when clicked
   function joinHallOfFame() {
-    let menuHallJoin = document.querySelector("p#join-hall-of-fame");
+    let menuHallJoin = document.querySelector("p#menu-join-hall-of-fame");
     menuHallJoin.addEventListener("click", function () {
       document.querySelector("form#hall-of-fame-form").reset();
       let completeEntryCheck = document.querySelectorAll(
