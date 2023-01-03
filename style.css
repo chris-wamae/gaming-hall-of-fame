@@ -110,7 +110,9 @@ color:var(--red);
     width:20px;
     height:20px;
 }
-
+#join-hall-of-fame label{
+font-weight:bolder;
+}
 #massively-player-label{
 position: relative;
 top:20px;
